@@ -24,16 +24,16 @@ Un **livre des minutes** (Minute Book) est un document juridique essentiel qui c
 
 Vous devez identifier les sections suivantes dans le registre des procès-verbaux. **Note importante : toutes les sections ne sont pas nécessairement présentes dans chaque document.**
 
-1. **Articles and Amendments** / **Statuts et Amendements**
+1. **Articles & Amendments** / **Statuts et Amendements**
 2. **By Laws** / **Règlements**
 3. **Unanimous Shareholder Agreement** / **Convention d'Actionnaires Unanime**
-4. **Minutes and Resolutions** / **Procès-verbaux et Résolutions**
+4. **Minutes & Resolutions** / **Procès-verbaux et Résolutions**
 5. **Directors Register** / **Registre des Administrateurs**
 6. **Officers Register** / **Registre des Dirigeants**
 7. **Shareholder Register** / **Registre des Actionnaires**
 8. **Securities Register** / **Registre des Titres**
 9. **Share Certificates** / **Certificats d'Actions**
-10. **Ultimate Beneficial Owner Register** / **Registre des Bénéficiaires Ultimes**
+10. **Ultimate Beneficial Owner Register** / **Registre des Particuliers Ayant un Controle Important**
 
 Votre solution doit être capable de détecter ces sections même si elles apparaissent dans un ordre différent ou si certaines sont absentes du document.
 
@@ -90,7 +90,7 @@ Content-Type: application/json
 {
   "pdfPage": "base64_encoded_image_string",
   "prompt": "Votre prompt ici",
-  "model": "gemini-2.5-flash" || "gpt-4o"
+  "model": "gemini-2.5-flash" || "gpt-4o" || "claude-sonnet-4.5"
 }
 ```
 
@@ -226,7 +226,7 @@ Votre fonction doit retourner une liste de sections avec leurs pages de début e
 {
   "sections": [
     {
-      "name": "Articles and Amendments",
+      "name": "Articles & Amendments",
       "startPage": 1,
       "endPage": 5
     },
@@ -245,7 +245,7 @@ Votre fonction doit retourner une liste de sections avec leurs pages de début e
 - Les noms doivent correspondre exactement à l'une des 10 sections listées précédemment (voir section "Sections à Identifier")
 - **Toute faute de frappe, variation d'orthographe ou nom similaire mais incorrect sera rejeté par le correcteur automatique**
 - Assurez-vous d'extraire le nom exact tel qu'il est écrit dans le document, sans modification
-- Exemples de noms corrects : `"Articles and Amendments"`, `"By Laws"`, `"Shareholder Register"`
+- Exemples de noms corrects : `"Articles & Amendments"`, `"By Laws"`, `"Shareholder Register"`
 - Exemples qui seraient rejetés : `"Article and Amendment"` (singulier), `"By-Laws"` (avec tiret), `"Shareholders Register"` (pluriel incorrect)
 
 ---
@@ -316,6 +316,6 @@ N'oubliez pas : le score est calculé comme **Temps × Requêtes × Erreurs**. T
 
 Les membres de l'équipe gagnante se mériteront une entrevue afin d'obtenir un stage d'été chez AutoComply.
 
-Si vous avez des questions pendant le concours, n'hésitez pas à demander aux organisateurs d'entrer en contact avec nous.
+Si vous avez des questions pendant le concours, n'hésitez pas à nous contacter au ```hr@autocomply.ca```.
 
 
